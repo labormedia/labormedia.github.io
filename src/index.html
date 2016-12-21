@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Templar App</title>
-    </head>
-    <body>
-        <templar></templar>
-        <script src="bundle.js" charset="utf-8"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <title>Templar App</title>
+    <style>
+        #parent {
+            position: fixed;
+            bottom: 15%;
+            right: 15%;
+            z-index: 10;
+            /*background: red;*/
+        }
+        
+        canvas {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <templar></templar>
+    <div id="parent">
+        <parameter-ui></parameter-ui>
+    </div>
+    <script src="bundle.js" charset="utf-8"></script>
+</body>
+
 </html>
