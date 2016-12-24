@@ -119,7 +119,7 @@ var testShader = new GL.Shader('\
         normal *= -1.0; \
     }\
 	  float brightness = dot (normal, direction);\
-    gl_FragColor = vec4 (vec3 (brightness), 1.0);\
+    gl_FragColor = vec4 (vec3 (brightness, brightness, brightness), 1.0);\
   }\
 ');
 
@@ -224,12 +224,22 @@ var transformM_i = scaleM_i.multiply(rotateM_i.multiply(translateM_i))
     mySIM.meshes_i[i].mesh.transform(transformM_i);
     //- goodShader.draw(meshes[i]);
   } 
+var pov = -8;
+this.mixin('target').observable.on('updated_target',function(e) {
+  var num = 0;
+  num = Number(e.value);
+  if (typeof num == 'number') {
+    pov = -1*num;
+    console.log('pov updated',pov)
+  } else console.log('not number');
+  console.log(typeof num,typeof num == 'number', -1*num, typeof pov);
+});
 
 gl.ondraw = function() {
   gl.clearColor(0.9, 0.9, 0.9, 1);
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
   gl.loadIdentity();
-  gl.translate(0, 0, -8);
+  gl.translate(0, 0, pov);
   gl.rotate(angleX, 1, 0, 0);
   gl.rotate(angleY, 0, 1, 0);
   gl.translate(0, -0.25, 0);

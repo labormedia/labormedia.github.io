@@ -43,13 +43,30 @@ input[type=range]
 //-     max: 100
 //-   }
 //- });
+//- x = document.getElementById("sliderh");
+//- console.log(this.x)
 </script>
-  <div id="parent"></div>
+
   <div id="parameters">
-    <h1>UI HUD</h1>
-    <input type="range" id="slider" min="1.0" max="10.0" >
-    <input type="range" orient="vertical" id="slider" min="1.0" max="10.0" >
+    <div>{ number }</div>
+    <form action="action_page.php">
+      <input type="color" id="gcolor" name="favcolor" value="#ff0000" oninput={ change }>
+    </form>
+    <input type="range" id="sliderh" min="1.0" max="10.0" oninput={ change } ></input>
+    <input type="range" orient="vertical" id="sliderv" min="1.0" max="10.0" oninput={ change } ></input>
   </div>
-  <div id="output"> </div>
+
+  console.log(this.mixin('target').hello)
+
+  change(e) { 
+    this.number=[e.target.type,e.target.id,e.target.value];
+    
+    //- this.update()
+    //- console.log(e.target.type,e.target.id,e.target.value);
+    this.mixin('target').target = e.target;
+    this.mixin('target').observable.trigger('updated_target', e.target);
+  };
+  this.number = "Change me!";
+
 
 </parameter-ui>

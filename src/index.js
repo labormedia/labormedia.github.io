@@ -1,35 +1,17 @@
 var riot = require('riot')
-// riot.M = require('gl-matrix')
 require('./tags/templar.tag')
-// require('./tags/templar-tests.tag')
 require('./tags/parameter-ui.tag')
-// require('./libraries/gl-matrix.js')
 
 // require("babel-core").transform("code", {
 //   plugins: ["transform-runtime"]
 // });
 require.ensure(['./tags/templar.tag'], function(require){
-    // require('./libraries/lightgl/main.js');
     require('./models/param_test005.js');
 });
 
 require.ensure(['./tags/templar.tag'], function(require){
     require('./libraries/lightgl/main.js');
-    // require('./models/param_test005.js');
 });
-
-// require.ensure(['./libraries/sim/common.js'], function(require){
-//     require('./libraries/lightgl/main.js');
-// });
-
-// require.ensure(['./libraries/lightgl/main.js'], function(require){
-//     require('./libraries/lightgl/matrix.js');
-//     require('./libraries/lightgl/mesh.js');
-//     require('./libraries/lightgl/raytracer.js');
-//     require('./libraries/lightgl/shader.js');
-//     require('./libraries/lightgl/texture.js');
-//     require('./libraries/lightgl/vector.js');
-// });
 
 
 // riot.cloneObject = function(obj) {
@@ -43,8 +25,11 @@ require.ensure(['./tags/templar.tag'], function(require){
 //             c.constructor = Clone;
 //             return c;
 // }
-
+var mixinObject = {observable: riot.observable(),hello: "good", target: null, pov: -8};
+riot.mixin('target', mixinObject)
 document.addEventListener('DOMContentLoaded', function(){
+    var mixinObject = null;
+
     riot.mount('templar')
     // riot.mount('templar-tests')
     riot.mount('parameter-ui')
