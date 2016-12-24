@@ -22,7 +22,7 @@ module.exports = {
             },
             {
                 test: /\.tag$/,
-                loader: 'tag',
+                loader: 'tag-loader',
                 exclude: /node_modules/
             }
         ]

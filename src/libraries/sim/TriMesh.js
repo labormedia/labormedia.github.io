@@ -1,4 +1,6 @@
-function TriangleMesh(numTriangles, texelsPerSide) {
+import { GL } from '../lightgl/main'
+
+export function TriangleMesh(numTriangles, texelsPerSide) {
   this.size = numTriangles;
   this.texelsPerSide = texelsPerSide;
   this.mesh = new GL.Mesh({ normals: true, coords: true });
@@ -7,10 +9,13 @@ function TriangleMesh(numTriangles, texelsPerSide) {
   this.bounds = null;
   this.sampleCount = 0;
 
+
   // Also need values offset by 0.5 texels to avoid seams between lightmap cells
   // this.mesh.addVertexBuffer('offsetCoords', 'offsetCoord');
   // this.mesh.addVertexBuffer('offsetPositions', 'offsetPosition');
 };
+
+
 
 TriangleMesh.prototype.addVertices = function(vertices) {
   // this.mesh.vertices.push(a.toArray());
@@ -55,10 +60,16 @@ TriangleMesh.prototype.addDoubleTriangle = function(t1, t2, t3) {
   this.addTriangle(t1, t3, t2);
 };
 
+TriangleMesh.prototype.addModel = function (newModel) {
+  this.addVertices(newModel.vertices);
+  this.addNormals(newModel.normals);
+  this.addTriangles(newModel.triangles);
+}
+
 TriangleMesh.prototype.compile = function() {
   // Finalize mesh
   this.mesh.compile();
-  this.bounds = this.mesh.getBoundingSphere();
+  this.bounds = this.mesh.getBoundingSphere();  // NOT deprecated
 
   // Create textures
   // var size = this.size * this.texelsPerSide;
