@@ -31,7 +31,6 @@ TriangleMesh.prototype.addVertices = function(vertices) {
 
 TriangleMesh.prototype.addNormals = function(normals) {
   this.mesh.normals = normals;
-
 };
 
 // Add a quad given its four vertices and allocate space for it in the lightmap
@@ -48,6 +47,7 @@ TriangleMesh.prototype.addTriangles = function(triangles) {
 TriangleMesh.prototype.addDoubleTriangles = function(triangles) {
   // Add Double triangles
   this.mesh.triangles = triangles;
+  this.mesh.computeWireframe();
   // for (var i = 0; i < triangles.length; i++) {
   //   this.addTriangle(triangles[i][0], triangles[i][2], triangles[i][1])
   // }
@@ -63,7 +63,7 @@ TriangleMesh.prototype.addDoubleTriangle = function(t1, t2, t3) {
 TriangleMesh.prototype.addModel = function (newModel) {
   this.addVertices(newModel.vertices);
   this.addNormals(newModel.normals);
-  this.addTriangles(newModel.triangles);
+  this.addDoubleTriangles(newModel.triangles);
 }
 
 TriangleMesh.prototype.compile = function() {

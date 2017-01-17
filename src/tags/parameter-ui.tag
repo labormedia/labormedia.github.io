@@ -52,8 +52,8 @@ input[type=range]
     <form action="action_page.php">
       <input type="color" id="gcolor" name="favcolor" value="#ff0000" oninput={ change }>
     </form>
-    <input type="range" id="sliderh" min="1.0" max="10.0" oninput={ change } ></input>
-    <input type="range" orient="vertical" id="sliderv" min="1.0" max="10.0" oninput={ change } ></input>
+    <input type="range" id="sliderh" min="1.0" max="10.0" step ="0.01" oninput={ change } ></input>
+    <input type="range" orient="vertical" id="sliderv" min="1.0" max="10.0" step ="0.01" oninput={ change } >slider</input>
   </div>
 
   console.log(this.mixin('target').hello)

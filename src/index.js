@@ -6,7 +6,7 @@ require('./tags/parameter-ui.tag')
 //   plugins: ["transform-runtime"]
 // });
 require.ensure(['./tags/templar.tag'], function(require){
-    require('./models/param_test005.js');
+    require('./models/GHModel000.js');
 });
 
 require.ensure(['./tags/templar.tag'], function(require){

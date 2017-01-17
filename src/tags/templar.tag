@@ -12,9 +12,10 @@ require.ensure([], function(require){
 //- require.ensure(['../libraries/lightgl/main.js'], function() {
 //- })
 import { GL } from '../libraries/lightgl/main';
-import { GHModel } from '../models/param_test005.js';
+import { GHModel } from '../models/GHModel000.js';
 import { SIM } from '../libraries/sim/common';
 import { TriangleMesh } from '../libraries/sim/TriMesh';
+
 
 
 <templar>
@@ -157,6 +158,7 @@ var trianglessum = 0;
   //- console.log("Poligon Count : "+polygon_count);
   //- var TriMesh = [];
   // this should be included in TriMesh dependency
+  //- console.log(JSON.stringify(GHModel))
   var mySIM = new SIM(GHModel.triset.length);
 
 
@@ -166,12 +168,12 @@ for (var j = 0; j < GHModel.triset.length; j++) {
   var data = GHModel.triset[j];
 
   mySIM.meshes.push(new TriangleMesh(trianglessum, 64)) ;
-  mySIM.meshes_i.push(new TriangleMesh(trianglessum, 64)) ;
+  //- mySIM.meshes_i.push(new TriangleMesh(trianglessum, 64)) ;
 
   mySIM.meshes[j].addModel(data);
-  mySIM.meshes_i[j].addModel(data);
+  //- mySIM.meshes_i[j].addModel(data);
   mySIM.meshes[j].compile();
-  mySIM.meshes_i[j].compile();
+  //- mySIM.meshes_i[j].compile();
   //- console.log(mySIM.meshes[j].bounds);
   mySIM.centroid(mySIM.meshes[j].bounds.center);
 }
@@ -196,7 +198,7 @@ gl.onmousemove = function(e) {
   if (e.dragging) {
     angleY += e.deltaX;
     angleX += e.deltaY;
-    angleX = Math.max(-90, Math.min(90, angleX));
+    angleX = Math.max(-1, Math.min(90, angleX));
     //- console.log(angleY,angleX)
   }
 };
@@ -219,31 +221,37 @@ var translateM_i = GL.Matrix.translate(1.7*tf*tG.x,tf*tG.y,tf*tG.z);
 var transformM = scaleM.multiply(rotateM.multiply(translateM))
 var transformM_i = scaleM_i.multiply(rotateM_i.multiply(translateM_i))
 //- var transformM = translateM;
-  for (var i = 0; i < mySIM.meshes_i.length; i++) {
+  for (var i = 0; i < mySIM.meshes.length; i++) {
     mySIM.meshes[i].mesh.transform(transformM);
-    mySIM.meshes_i[i].mesh.transform(transformM_i);
+    //- mySIM.meshes_i[i].mesh.transform(transformM_i);
     //- goodShader.draw(meshes[i]);
   } 
 var pov = -8;
+var scaletest = GL.Matrix.scale(0.3,0.3,0.3);
 this.mixin('target').observable.on('updated_target',function(e) {
   var num = 0;
   num = Number(e.value);
-  if (typeof num == 'number') {
+  //- console.log(e.id)
+  if (typeof num == 'number' && e.id == 'sliderv') {
     pov = -1*num;
-    console.log('pov updated',pov)
+    //- console.log('pov updated',pov)
   } else console.log('not number');
-  console.log(typeof num,typeof num == 'number', -1*num, typeof pov);
+  if (typeof num == 'number' && e.id == 'sliderh') {
+    scaletest = GL.Matrix.scale(0.3,num*0.3,0.3);
+    //- console.log('pov updated',pov)
+  } else console.log('not number');
+  //- console.log(typeof num,typeof num == 'number', -1*num, typeof pov);
 });
 
 gl.ondraw = function() {
-  gl.clearColor(0.9, 0.9, 0.9, 1);
+  gl.clearColor(0.2, 0.2, 0.9, 1);
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
   gl.loadIdentity();
   gl.translate(0, 0, pov);
+  //- gl.scale(scaleY,1, 1);
   gl.rotate(angleX, 1, 0, 0);
   gl.rotate(angleY, 0, 1, 0);
   gl.translate(0, -0.25, 0);
-
   // Alternate between a shadow from a random point on the sky hemisphere
   // and a random point near the light (creates a soft shadow)
   //- var dir = GL.Vector.randomDirection();
@@ -257,9 +265,9 @@ gl.ondraw = function() {
 
   // we can add here some meshes vs meshes_i length check , i.e. they should be the same.
   for (var i = 0; i < mySIM.meshes.length; i++) {
-    //- meshes[i].transform(scaleM)
-    testShader.draw(mySIM.meshes[i].mesh);
-    testShader.draw(mySIM.meshes_i[i].mesh);
+    //- mySIM.meshes[i].mesh.transform(scaletest);
+    testShader.draw(mySIM.meshes[i].mesh, gl.LINES);
+    //- testShader.draw(mySIM.meshes_i[i].mesh);
     //- textureMapShader.draw(meshes[i]);
   } 
   //- goodShader.draw(meshes[1]);
