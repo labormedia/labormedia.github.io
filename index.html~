@@ -42,7 +42,7 @@
             top: 5%;
             margin: 0 5%;
 	    max-width: 1920px;
-	    width: 460px;
+	    width: 480px;
 	    max-height: 1080px;
 	    height: 900px;
 	    border: 1px solid #D61A78;
