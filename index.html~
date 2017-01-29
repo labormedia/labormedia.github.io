@@ -42,7 +42,7 @@
             top: 5%;
             margin: 0 5%;
 	    max-width: 1920px;
-	    width: 440px;
+	    width: 460px;
 	    max-height: 1080px;
 	    height: 900px;
 	    border: 1px solid #D61A78;
@@ -51,7 +51,7 @@
 	    text-align: left;
 	    vertical-align: middle; 
 	    color: #66CC99;
-	    padding: 1% 1%; 	
+	    padding: 1% 0; 	
             /*z-index: 10;*/
             /*background: red;*/
         }
@@ -61,7 +61,7 @@
             top: 30%;
             margin: 5% 70%;
 	    max-width: 1920px;
-	    width: 22%;
+	    width: 42%;
 	    max-height: 1080px;
 	    height: 55%;
 	    border: 1px solid #D61A78;
