@@ -59,7 +59,7 @@
 		background-color:rgba(1, 1, 1, 0.9);
             position: fixed;
             top: 30%;
-            margin: 5% 45%;
+            margin: 5% 48%;
 	    max-width: 1920px;
 	    width: 34%;
 	    max-height: 1080px;
@@ -128,22 +128,29 @@
     </div>
     	<div id="title">
 		<span>Fabricaci&#243;n Digital con Grasshopper</span><br>
-		<span>23-26 Febrero 2017, Osorno
+		<span>23-26 Febrero 2017, Osorno</span>
 	</div>
 	<div id="info">
 <div class="fb-page" data-href="https://www.facebook.com/ikkunaSpA/" data-tabs="timeline" data-width="440" data-height="880" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ikkunaSpA/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ikkunaSpA/">Ikkuna SpA</a></blockquote></div>
 
 	</div>
 	<div id="venue">
-		<ul> <h1>Contenidos : </h1>
-			<li><span>principios de grasshopper</span></li>
-			<li><span>importacion, creacion y modificacion de plantillas, sus dimensiones</span></li>
-			<li><span>exportacion a formato de vectores y control numerico.</span></li>
-			<li><span>fabricacion y armado de prototipos</span></li>
-		</ul>
-		<span><h1>Inscripciones :</h1></span> <br>
+		<div class="fb-share-button" data-href="https://www.facebook.com/ikkunaSpA/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FikkunaSpA%2F&amp;src=sdkpreparse">Share</a></div><br>
+		<span>Taller practico para la fabricacion digital con Grasshopper/Rhino</span>		
+		<span>Fecha : 23-24-25-26 de Febrero, 2017</span><br>
+		<span>Valor : CLP $148.000.= p/p</span><br>
+		<span>Direccion : Av. Buenos Aires 737, Osorno, X Region</span><br>
 		<br>
-		<span> <a href="mailto:info@ikkuna.io">info@ikkuna.io</a></span> <br>
+		<span>Contenidos : </span>
+		<ul>
+			<li><span>Principios de Grasshopper</span></li>
+			<li><span>Importacion, creacion y modificacion de plantillas, sus dimensiones</span></li>
+			<li><span>Exportacion a formato de vectores y control numerico.</span></li>
+			<li><span>Fabricacion y armado de prototipos</span></li>
+		</ul>
+		<span>Inscripciones :</span> <br><br>
+		<span> Correo : <a href="mailto:talleres@ikkuna.io">talleres@ikkuna.io</a></span> <br>
+		<span> Telefono : +562 22284732</span><br>
 	</div>
     <script src="bundle.js" charset="utf-8"></script>
 </body>
