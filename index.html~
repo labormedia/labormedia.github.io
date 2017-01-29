@@ -42,7 +42,7 @@
             top: 30%;
             margin: 5% 5%;
 	    max-width: 1920px;
-	    width: 18%;
+	    width: 22%;
 	    max-height: 1080px;
 	    height: 55%;
 	    border: 1px solid #D61A78;
@@ -60,9 +60,9 @@
 		background-color:rgba(1, 1, 1, 0.5);
             position: fixed;
             top: 30%;
-            margin: 5% 76%;
+            margin: 5% 71%;
 	    max-width: 1920px;
-	    width: 18%;
+	    width: 22%;
 	    max-height: 1080px;
 	    height: 55%;
 	    border: 1px solid #D61A78;
@@ -120,7 +120,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=10652951338";
+  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=10652951338";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
     <templar></templar> 
