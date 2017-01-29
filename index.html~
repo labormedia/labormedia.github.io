@@ -60,7 +60,7 @@
 		background-color:rgba(1, 1, 1, 0.5);
             position: fixed;
             top: 30%;
-            margin: 5% 71%;
+            margin: 5% 72%;
 	    max-width: 1920px;
 	    width: 22%;
 	    max-height: 1080px;
@@ -120,7 +120,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=10652951338";
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=10652951338";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
     <templar></templar> 
@@ -132,18 +132,19 @@
 		<span>23-26 Febrero, 2017, Osorno
 	</div>
 	<div id="info">
+<div class="fb-page" data-href="https://www.facebook.com/ikkunaSpA/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ikkunaSpA/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ikkunaSpA/">Ikkuna SpA</a></blockquote></div>
+
+	</div>
+	<div id="venue">
 		<ul> <h1>Contenidos : </h1>
 			<li><span>principios de grasshopper</span></li>
 			<li><span>importacion, creacion y modificacion de plantillas, sus dimensiones</span></li>
 			<li><span>exportacion a formato de vectores y control numerico.</span></li>
 			<li><span>fabricacion y armado de prototipos</span></li>
 		</ul>
-	</div>
-	<div id="venue">
 		<span><h1>Inscripciones :</h1></span> <br>
 		<br>
 		<span> <a href="mailto:info@ikkuna.io">info@ikkuna.io</a></span> <br>
-<div class="fb-page" data-href="https://www.facebook.com/ikkunaSpA/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ikkunaSpA/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ikkunaSpA/">Ikkuna SpA</a></blockquote></div>
 	</div>
     <script src="bundle.js" charset="utf-8"></script>
 </body>
