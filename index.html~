@@ -77,7 +77,7 @@
 
 	#fb-share {
 		position:fixed;
-		margin: 0 45%;
+		margin: 0 25%;
 	}
 
 	span {
@@ -140,11 +140,12 @@
 
 	</div>
 	<div id="venue">
-		<a href="http://www.eventbrite.es/e/entradas-workshop-en-fabricacion-digital-31694542229?ref=ebtnebregn" target="_blank"><img src="https://www.eventbrite.es/custombutton?eid=31694542229" alt="Eventbrite - Workshop en Fabricación Digital" /></a><br>
+		<a href="https://welcu.com/ikkuna/workshop-en-fabricacion-digital-con-grasshopperrhino" target="_blank"><img src="https://www.eventbrite.es/custombutton?eid=31694542229" alt="Workshop en Fabricación Digital" /></a><br>
 		<span>Taller practico para la fabricacion digital con Grasshopper/Rhino</span>		
 		<span>Fecha : 23-24-25-26 de Febrero, 2017</span><br>
-		<span>Valor : CLP $148.000.= p/p</span><br>
-		<span>Direccion : Osorno, Chile | Instalaciones de Creapanel Ltda. </span><br>
+		<span>Early Birds : CLP $120.000.= (hasta el 13 de febrero).	</span><br>
+		<span>General :  CLP $148.000.=</span><br>
+		<span>Lugar :  Instalaciones de Creapanel Ltda. | Osorno, Chile </span><br>
 		<br>
 		<span>Contenidos : </span>
 		<ul>
@@ -154,8 +155,9 @@
 			<li><span>Fabricacion y armado de prototipos</span></li>
 		</ul>
 		<span>Contacto y Consultas:</span> <br>
-		<span> Correo : <a href="mailto:info@ikkuna.io">info@ikkuna.io</a></span> <br>
-		<span> Telefono : +562 22284732</span><br>
+		<span> Ikkuna SpA </span><br>
+		<span> correo : <a href="mailto:info@ikkuna.io">info@ikkuna.io</a></span> <br>
+		<span> telefono : +562 22284732</span><br>	
 		<div class="fb-share-button" id="fb-share" data-href="https://www.facebook.com/ikkunaSpA/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FikkunaSpA%2F&amp;src=sdkpreparse">Share</a></div>
 	</div>
     <script src="bundle.js" charset="utf-8"></script>
