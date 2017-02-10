@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --optimize-dedupe",
-    "bundle": "webpack --optimize-minimize --optimize-dedupe -p --config webpack.config.js",
+    "bundle": "webpack --optimize-minimize -p --config webpack.config.js",
     "start": "./node_modules/.bin/http-server src"
   },
   "repository": {

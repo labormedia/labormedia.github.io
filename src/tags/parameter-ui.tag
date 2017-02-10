@@ -61,7 +61,7 @@ input[type=range]
   change(e) { 
     this.number=[e.target.type,e.target.id,e.target.value];
     
-    //- this.update()
+    this.update()
     //- console.log(e.target.type,e.target.id,e.target.value);
     this.mixin('target').target = e.target;
     this.mixin('target').observable.trigger('updated_target', e.target);

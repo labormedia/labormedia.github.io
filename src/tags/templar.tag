@@ -102,6 +102,8 @@ var goodShader = new GL.Shader('\
   }\
 ');
 
+var clearColorvec = [0.023, 0.023, 0.05, 0.5];
+
 var testShader = new GL.Shader('\
   varying vec3 vnormal;\
   varying vec4 pos;\
@@ -119,8 +121,8 @@ var testShader = new GL.Shader('\
     if (dot (normal, pos.xyz) > 0.0) {\
         normal *= -1.0; \
     }\
-	  float brightness = dot (normal, direction);\
-    gl_FragColor = vec4 (vec3 (brightness, brightness, brightness), 1.0);\
+	  float brightness = max(0.7, dot (normal, direction));\
+    gl_FragColor = vec4 (vec3 (0.8*brightness, 0.9*brightness, 0.3*brightness), 1.0);\
   }\
 ');
 
@@ -226,7 +228,7 @@ var transformM_i = scaleM_i.multiply(rotateM_i.multiply(translateM_i))
     //- mySIM.meshes_i[i].mesh.transform(transformM_i);
     //- goodShader.draw(meshes[i]);
   } 
-var pov = -8;
+var pov = -2.59;
 var scaletest = GL.Matrix.scale(0.3,0.3,0.3);
 this.mixin('target').observable.on('updated_target',function(e) {
   var num = 0;
@@ -244,7 +246,7 @@ this.mixin('target').observable.on('updated_target',function(e) {
 });
 
 gl.ondraw = function() {
-  gl.clearColor(0.2, 0.2, 0.9, 1);
+  gl.clearColor(clearColorvec[0], clearColorvec[1], clearColorvec[2], clearColorvec[3]);
   gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
   gl.loadIdentity();
   gl.translate(0, 0, pov);
