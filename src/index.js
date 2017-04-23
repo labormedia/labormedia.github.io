@@ -1,6 +1,7 @@
 var riot = require('riot')
 require('./tags/templar.tag')
 require('./tags/parameter-ui.tag')
+require('./tags/fb-pixel.tag')
 
 // require("babel-core").transform("code", {
 //   plugins: ["transform-runtime"]
@@ -12,7 +13,6 @@ require.ensure(['./tags/templar.tag'], function(require){
 require.ensure(['./tags/templar.tag'], function(require){
     require('./libraries/lightgl/main.js');
 });
-
 
 // riot.cloneObject = function(obj) {
 //     // A clone of an object is an empty object 
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function(){
     riot.mount('templar')
     // riot.mount('templar-tests')
     riot.mount('parameter-ui')
+    riot.mount('fb-pixel')
 })
 
 
