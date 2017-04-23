@@ -1,4 +1,4 @@
-var path = require('path')
+var path = require('path');
 
 module.exports = {
     devServer: {
@@ -10,6 +10,8 @@ module.exports = {
         path: __dirname+'/src',
         filename: 'bundle.js'
     },
+    plugins: [
+    ],
     module: {
         loaders:[
             {
