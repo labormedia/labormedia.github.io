@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+.github/
+.vscode/
 bower_components/
 build/
 node_modules/
