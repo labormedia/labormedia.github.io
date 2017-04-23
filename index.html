@@ -40,6 +40,35 @@
             width: 100%;
             z-index: -1;
         }
+        
+        .fb-container { 
+            background-color:rgba(1, 1, 1, 0.5); 
+            position: fixed; 
+            top: 0%; 
+            margin: 0 0%; 
+            max-width: 1920px; 
+            width: 475px; 
+            max-height: 1080px; 
+            height: 100%; 
+            border: 1px solid #000000; 
+            font-size: 1vw; 
+            line-height: 150%; 
+            text-align: left; 
+            vertical-align: middle;
+            color: #66CC99; 
+            padding: 0% 0; /*z-index: 10;*/ /*background: red;*/ 
+        }
+
+        .fb-buttons {
+            position: fixed;
+            top: 85%;
+            margin: 0 85%;
+            width: 100px;
+            height: 100px;
+            color: #66CC99;
+            font-size: 1vw;
+            padding: 0% 0;
+        }
     </style>
 
 </head>
@@ -52,7 +81,27 @@
         <!--<parameter-ui></parameter-ui>-->
     </div>
     <!--<script-io></script-io>-->
-    
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=10652951338";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="fb-container">
+        <div class="fb-page" data-href="https://www.facebook.com/ikkunaSpA/" data-tabs="timeline" data-width="500" data-height="900px"
+            data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/ikkunaSpA/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ikkunaSpA/">Ikkuna SpA</a></blockquote>
+        </div>
+    </div>
+    <div class="fb-buttons">
+        <p><--drag--></p>
+        <div class="fb-share-button" data-href="https://www.facebook.com/ikkunaSpA/" data-layout="button_count" data-size="small"
+            data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FikkunaSpA%2F&amp;src=sdkpreparse">Share</a></div>
+    </div>
+        
 <script type="text/javascript" src="src/bundle/vendor.d41d8cd98f00b204e980.min.js"></script><script type="text/javascript" src="src/bundle/bundle.0a8de50f1674a0160c30.min.js"></script></body>
 
 </html>
