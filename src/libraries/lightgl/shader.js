@@ -65,8 +65,10 @@ export function Shader(vertexSource, fragmentSource) {
     }\
   ';
   var fragmentHeader = '\
-    precision mediump float;\ // change this depending on device compatibility between highp and mediump
+    precision highp float;\
   ' + header;
+
+  // change this depending on device compatibility between highp and mediump
 
   // Check for the use of built-in matrices that require expensive matrix
   // multiplications to compute, and record these in `usedMatrices`.

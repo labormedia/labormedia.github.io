@@ -113,7 +113,7 @@ var testShader = new GL.Shader('\
     gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;\
   }\
 ', '\
-  precision mediump float;\
+  precision highp float;\
   varying vec3 vnormal;\
   varying vec4 pos;\
   const vec3 direction = vec3 (0.424264, 0.565685, 0.707107);\
