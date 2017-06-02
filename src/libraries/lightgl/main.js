@@ -157,9 +157,10 @@ function addImmediateMode() {
     mode: -1,
     coord: [0, 0, 0, 0],
     color: [1, 1, 1, 1],
-    pointSize: 1,
+    pointSize: 1.0,
     shader: new Shader('\
-      uniform int pointSize;\
+      precision mediump float;\
+      uniform float pointSize;\
       varying vec4 color;\
       varying vec4 coord;\
       void main() {\
@@ -169,8 +170,9 @@ function addImmediateMode() {
         gl_PointSize = pointSize;\
       }\
     ', '\
+      precision mediump float; \
       uniform sampler2D texture;\
-      uniform int pointSize;\
+      uniform float pointSize;\
       uniform bool useTexture;\
       varying vec4 color;\
       varying vec4 coord;\
