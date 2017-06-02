@@ -169,7 +169,7 @@ function addImmediateMode() {
         gl_PointSize = pointSize;\
       }\
     ', '\
-      precision highp float; \
+      precision mediump float; \
       uniform sampler2D texture;\
       uniform float pointSize;\
       uniform bool useTexture;\
