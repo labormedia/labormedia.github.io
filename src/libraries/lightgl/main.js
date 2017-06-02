@@ -182,8 +182,8 @@ function addImmediateMode() {
       }\
     ')
   };
-  gl.pointSize = function(pointSize) {
-    immediateMode.shader.uniforms({ pointSize: pointSize });
+  gl.pointSize = function(mypointSize) {
+    immediateMode.shader.uniforms({ pointSize: mypointSize });
   };
   gl.begin = function(mode) {
     if (immediateMode.mode != -1) throw new Error('mismatched gl.begin() and gl.end() calls');
