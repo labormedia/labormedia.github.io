@@ -65,7 +65,7 @@ export function Shader(vertexSource, fragmentSource) {
     }\
   ';
   var fragmentHeader = '\
-    precision highp float;\
+    #if GL_FRAGMENT_PRECISION_HIGH == 1 \n precision highp float;\n #else \n precision mediump float;\n #endif \n \
   ' + header;
 
   // change this depending on device compatibility between highp and mediump
