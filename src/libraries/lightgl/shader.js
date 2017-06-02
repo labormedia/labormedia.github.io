@@ -54,6 +54,7 @@ export function Shader(vertexSource, fragmentSource) {
     uniform mat4 gl_ModelViewMatrixInverse;\
     uniform mat4 gl_ProjectionMatrixInverse;\
     uniform mat4 gl_ModelViewProjectionMatrixInverse;\
+    \
   ';
   var vertexHeader = header + '\
     precision mediump float;\
