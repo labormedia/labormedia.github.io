@@ -159,6 +159,7 @@ function addImmediateMode() {
     color: [1, 1, 1, 1],
     pointSize: 1,
     shader: new Shader('\
+      precision mediump float;\
       uniform float pointSize;\
       varying vec4 color;\
       varying vec4 coord;\
