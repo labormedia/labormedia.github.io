@@ -11,7 +11,7 @@ async function init() {
         main();
     } else {
         const [{Chart, default: init}, {main, setup}] = await Promise.all([
-            import("../pkg/custom_plotters.js"),
+            import("../wasm/custom_plotters.js"),
             import("./index.js"),
         ]);
         await init();

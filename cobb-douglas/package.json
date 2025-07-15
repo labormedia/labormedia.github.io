@@ -18,7 +18,7 @@
     },
     "homepage": "https://github.com/labormedia/custom-plotters",
     "dependencies": {
-      "wasm-demo": "file:../pkg"
+      "wasm-demo": "file:../wasm"
     },
     "devDependencies": {
       "webpack": "^4.43.0",
