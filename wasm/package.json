@@ -1,0 +1,17 @@
+{
+  "name": "custom-plotters",
+  "collaborators": [
+    "Diego Correa Tristain <algoritmia@labormedia.cl>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "custom_plotters_bg.wasm",
+    "custom_plotters.js",
+    "custom_plotters.d.ts"
+  ],
+  "module": "custom_plotters.js",
+  "types": "custom_plotters.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
