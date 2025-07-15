@@ -1,0 +1,29 @@
+{
+    "name": "custom-plotters",
+    "version": "0.1.0",
+    "description": "Custom Plotters",
+    "main": "index.js",
+    "scripts": {
+      "build": "webpack --config webpack.config.js",
+      "start": "webpack-dev-server"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/labormedia/custom-plotters.git"
+    },
+    "author": "Diego Correa Tristain <algoritmia@labormedia.cl>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/labormedia/custom-plotters/issues"
+    },
+    "homepage": "https://github.com/labormedia/custom-plotters",
+    "dependencies": {
+      "wasm-demo": "file:../pkg"
+    },
+    "devDependencies": {
+      "webpack": "^4.43.0",
+      "webpack-cli": "^3.3.11",
+      "webpack-dev-server": "^3.10.3",
+      "copy-webpack-plugin": "^5.0.0"
+    }
+  }
